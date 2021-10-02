@@ -592,3 +592,36 @@
 // }
 
 
+//없는 숫자 더하기
+
+// function solution(numbers) {
+
+//     let value = []
+//     let end = 0
+    
+//     if(numbers.indexOf(0) === -1)
+//     {
+//         numbers.push(0)    
+//     }
+//     numbers.sort((a,b) => a - b)
+    
+    
+//     for(let i = 0; i < 9; i++)
+//     {
+//         if(numbers[i] + 1 !== numbers[i + 1])
+//         {
+//             numbers.splice(i + 1, 0, numbers[i] + 1)
+//             value.push(numbers[i] + 1)
+//         }
+        
+//     }
+    
+//     for(let i = 0; i < value.length; i++)
+//     {
+//         end += value[i]
+//     }
+    
+//         return end
+//     }
+    
+

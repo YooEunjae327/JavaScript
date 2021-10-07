@@ -483,19 +483,56 @@
 // console.log(arr1in)
 // console.log(arr2in)
 
+let array = [1, 5, 2, 6, 3, 7, 4]
+let commands = [[2,5,3], [4,4,1], [1,7,3]]
 
+let input1 = []
+let input2 = []
+let input3 = []
+let end = []
 
-let a = ['123', '34']
-//----------
-let b = []
-
-if(a[0][0] < a[1][0])
+for(let i = 0; i < 3; i++)
 {
-    b = a[1] + a[0]
+    for(let j = commands[i][0]; j <= commands[i][1]; j++)
+    {
+        if(i === 0)
+        {
+            input1.push(array[j - 1])
+        }
+        else if(i === 1)
+        {
+            input2.push(array[j - 1])
+        }
+        else if(i === 2)
+        {
+            input3.push(array[j - 1])
+        }
+    }
+
 }
-else
+input1.sort((a,b) => a - b)
+input2.sort((a,b) => a - b)
+input3.sort((a,b) => a - b)
+
+for(let i = 0; i < 3; i++)
 {
-    b = a[0] + a[1]
+    if(i === 0)
+    {
+        end.push(input1[commands[i][2] - 1])
+    }
+    else if(i === 1)
+    {
+        end.push(input2[commands[i][2] - 1])
+    }
+    else if(i === 2)
+    {
+        end.push(input3[commands[i][2] - 1])
+    }
 }
 
-console.log(b)
+console.log(input1)
+console.log(input2)
+console.log(input3)
+console.log(end)
+
+console.log(commands[0][0], commands [0][1])
